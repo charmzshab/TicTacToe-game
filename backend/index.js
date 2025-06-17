@@ -8,7 +8,7 @@ const CONNECTIONS_TABLE = "Connections";
 const USERS_TABLE = "UserStats";
 const apiGateway = new AWS.ApiGatewayManagementApi({
   apiVersion: "2018-11-29",
-  endpoint: "09dm0d29vl.execute-api.us-east-1.amazonaws.com/production",
+  endpoint: "ytp8b58t71.execute-api.us-east-2.amazonaws.com/production",
 });
 
 exports.handler = async (event) => {
@@ -427,7 +427,7 @@ async function handleDisconnect(connId) {
 
 async function getUserEmail(userId) {
   const cognito = new AWS.CognitoIdentityServiceProvider();
-  const userPoolId = "us-east-1_6VPoqWJgk";
+  const userPoolId = "us-east-2_553IGIxQ6";
   const user = await cognito.adminGetUser({
     UserPoolId: userPoolId,
     Username: userId

@@ -5,8 +5,8 @@ Amplify.configure({
     Cognito: {
       // @ts-expect-error Cognito config structure not recognized by types
       region: 'us-east-2',
-      userPoolId: 'us-east-2_azti5AuYe', // your Cognito User Pool ID
-      userPoolClientId: '69n7h74t2i1ru07t464g51gi6m', // your Cognito App Client ID
+      userPoolId: 'us-east-2_553IGIxQ6', // your Cognito User Pool ID
+      userPoolClientId: '39d73mu59m8mfk91tp1qu8m63i', // your Cognito App Client ID
     },
   },
 });
