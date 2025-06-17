@@ -1,0 +1,16 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      nodejs: 18
+    commands:
+      - cd backend
+      - npm install
+  build:
+    commands:
+      - zip -r function.zip index.js utils/ node_modules/
+      - aws s3 cp function.zip s3://ttt-backend-bucket/function.zip
+artifacts:
+  files:
+    - backend/function.zip
